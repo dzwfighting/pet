@@ -90,7 +90,7 @@ const ShopCartComponent = (props) => {
   if (newUser && newUser.cart) {
     card = cartProdData.map((pro) => {
       return (
-        <div style={{ marginTop: "40px", width: "80%" }}>
+        <div style={{ marginTop: "40px", width: "100%" }}>
           <Card className="my-2">
             <Row>
               <Col xs="3">
@@ -99,6 +99,8 @@ const ShopCartComponent = (props) => {
                   src={pro.image}
                   style={{
                     marginBottom: "10px",
+                    width: "100%",
+                    height: "100%",
                   }}
                 />
               </Col>

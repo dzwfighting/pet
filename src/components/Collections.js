@@ -42,7 +42,7 @@ const Collections = () => {
   if (curUser && curUserCollections) {
     card = curUserCollections.map((pro) => {
       return (
-        <div style={{ marginTop: "40px", width: "80%" }}>
+        <div style={{ marginTop: "40px", width: "100%" }}>
           <Card className="my-2">
             <Row>
               <Col xs="3">
@@ -51,6 +51,8 @@ const Collections = () => {
                   src={pro.image}
                   style={{
                     marginBottom: "10px",
+                    width: "100%",
+                    height: "100%",
                   }}
                 />
               </Col>
