@@ -17,7 +17,7 @@ const NavComponent = () => {
   // console.log(curUser);
 
   return (
-    <div style={{ marginLeft: "40px", marginTop: "20px", marginRight: "40px" }}>
+    <div style={{ marginLeft: "50px", marginTop: "20px", marginRight: "50px" }}>
       <Link to="/" style={{ textDecoration: "none" }}>
         <Button color="secondary">Home</Button>
       </Link>
