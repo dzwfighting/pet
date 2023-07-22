@@ -3,10 +3,11 @@ import NavComponent from "../components/navComponent";
 
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 import { Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
-import { checkExitByEmail } from "../manipulate/checkValid";
+import { checkExitByEmail, checkLogin } from "../manipulate/checkValid";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../manipulate/action";
+import users from "../fake-data/users";
 
 const Login = (args) => {
   const [email, setEmail] = useState("");
@@ -17,16 +18,17 @@ const Login = (args) => {
 
   let errorMessage = "";
   const handleLogin = () => {
-    if (!checkExitByEmail(email)) {
+    if (checkLogin(email, password) == undefined) {
       console.log("in");
       errorMessage =
-        "this email is not exit or the email or password input wrong, please try again";
+        "this email is not exit or the email input wrong, please try again";
       navigate(`/error/${errorMessage}`);
+    } else {
+      let curUser = { email, password };
+      dispatch(login(curUser));
+      setSuccessLogin(true);
+      navigate("/");
     }
-    let curUser = { email, password };
-    dispatch(login(curUser));
-    setSuccessLogin(true);
-    navigate("/");
   };
   const toggle = () => {
     setSuccessLogin(!successLogin);

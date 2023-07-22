@@ -1,12 +1,26 @@
 import users from "../fake-data/users";
 
 export const checkExitByEmail = (email) => {
-  let find = users.filter((user) => user.email === email);
+  let find = users.filter((user) => user.email === email)[0];
   console.log(find.length);
-  if (find.length == 0) {
+  if (find == undefined) {
+    console.log("not valid");
     return false;
   } else {
     return true;
+  }
+};
+
+export const checkLogin = (email, password) => {
+  let find = users.filter((user) => user.email === email)[0];
+  if (find == undefined) {
+    return undefined;
+  }
+
+  if (find.password === password) {
+    return find;
+  } else {
+    return undefined;
   }
 };
 
