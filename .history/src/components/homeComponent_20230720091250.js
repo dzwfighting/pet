@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 const homeComponent = () => {
   return (
     <div
-      style={{ marginLeft: "20px", marginBottom: "40px", marginTop: "40px" }}
+      style={{ marginLeft: "100px", marginBottom: "40px", marginTop: "40px" }}
     >
       <Card sx={{ maxWidth: 700 }} style={{ marginBottom: "40px" }}>
         <CardMedia sx={{ height: 200 }} image={cat1} title="green iguana" />
