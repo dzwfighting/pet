@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import NavComponent from "../components/navComponent";
 
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 import { Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
@@ -33,6 +34,7 @@ const Login = (args) => {
   };
   return (
     <div>
+      <NavComponent />
       {successLogin && (
         <Modal isOpen={successLogin} toggle={toggle} {...args}>
           <ModalHeader toggle={toggle} style={{ fontFamily: "cursive" }}>
