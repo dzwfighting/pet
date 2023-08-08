@@ -1,6 +1,9 @@
 .App {
   text-align: center;
 }
+body {
+  background-image: url(./styles//images/background1.webp);
+}
 
 .App-logo {
   height: 40vmin;

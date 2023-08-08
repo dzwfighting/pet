@@ -124,12 +124,7 @@ const AllProductsComponent = () => {
     );
   }
 
-  return (
-    <div>
-      <NavComponent />
-      {card}
-    </div>
-  );
+  return <div>{card}</div>;
 };
 
 export default AllProductsComponent;

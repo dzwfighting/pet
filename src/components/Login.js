@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import NavComponent from "../components/navComponent";
-
+import { Link } from "react-router-dom";
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 import { Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import { checkExitByEmail, checkLogin } from "../manipulate/checkValid";
@@ -87,6 +87,12 @@ const Login = (args) => {
           </FormGroup>
           <Button onClick={handleLogin}>Login</Button>
         </Form>
+        <div style={{ marginTop: "20px", marginBottom: "20px" }}>
+          Not register? click hear to sign up~&nbsp;&nbsp;&nbsp;
+          <Link to="/register" style={{ textDecoration: "none" }}>
+            <Button color="secondary">Register</Button>
+          </Link>
+        </div>
       </div>
     </div>
   );
