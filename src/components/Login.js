@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../manipulate/action";
 import users from "../fake-data/users";
+import "../App.css";
 
 const Login = (args) => {
   const [email, setEmail] = useState("");
@@ -39,9 +40,7 @@ const Login = (args) => {
       <NavComponent />
       {successLogin && (
         <Modal isOpen={successLogin} toggle={toggle} {...args}>
-          <ModalHeader toggle={toggle} style={{ fontFamily: "cursive" }}>
-            Login success, enjoy~
-          </ModalHeader>
+          <ModalHeader toggle={toggle}>Login success, enjoy~</ModalHeader>
           <ModalFooter>
             <Button color="primary" onClick={toggle}>
               Ok
@@ -54,10 +53,7 @@ const Login = (args) => {
       >
         <Form>
           <FormGroup>
-            <Label
-              for="exampleEmail"
-              style={{ fontSize: "2rem", fontFamily: "cursive" }}
-            >
+            <Label for="exampleEmail" style={{ fontSize: "2rem" }}>
               Email
             </Label>
             <Input
@@ -70,10 +66,7 @@ const Login = (args) => {
             />
           </FormGroup>
           <FormGroup>
-            <Label
-              for="examplePassword"
-              style={{ fontSize: "2rem", fontFamily: "cursive" }}
-            >
+            <Label for="examplePassword" style={{ fontSize: "2rem" }}>
               Password
             </Label>
             <Input

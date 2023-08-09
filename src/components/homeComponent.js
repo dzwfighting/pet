@@ -16,8 +16,6 @@ const homeComponent = () => {
     >
       <Introduce />
       <AllProductsComponent />
-      <Cat />
-      <Dog />
     </div>
   );
 };
