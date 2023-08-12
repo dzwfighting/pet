@@ -7,8 +7,8 @@ import { checkExitByEmail, checkLogin } from "../manipulate/checkValid";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../manipulate/action";
-import users from "../fake-data/users";
 import "../App.css";
+import "../styles/css/login.css";
 
 const Login = (args) => {
   const [email, setEmail] = useState("");
@@ -48,12 +48,10 @@ const Login = (args) => {
           </ModalFooter>
         </Modal>
       )}
-      <div
-        style={{ marginLeft: "40px", marginRight: "100px", marginTop: "60px" }}
-      >
+      <div className="formSet">
         <Form>
           <FormGroup>
-            <Label for="exampleEmail" style={{ fontSize: "2rem" }}>
+            <Label for="exampleEmail" className="lableSet">
               Email
             </Label>
             <Input
@@ -63,10 +61,11 @@ const Login = (args) => {
               type="email"
               onChange={(e) => setEmail(e.target.value)}
               style={{ height: "45px", marginBottom: "60px" }}
+              className="inputSet"
             />
           </FormGroup>
           <FormGroup>
-            <Label for="examplePassword" style={{ fontSize: "2rem" }}>
+            <Label for="examplePassword" className="lableSet">
               Password
             </Label>
             <Input
@@ -76,16 +75,21 @@ const Login = (args) => {
               placeholder="input your email"
               type="password"
               style={{ height: "45px", marginBottom: "50px" }}
+              className="inputSet"
             />
           </FormGroup>
-          <Button onClick={handleLogin}>Login</Button>
+          <Button onClick={handleLogin} color="info" className="btnSet">
+            Login
+          </Button>
+          <div style={{ marginTop: "20px" }} className="pSet">
+            Not register? click hear to sign up~&nbsp;&nbsp;&nbsp;
+            <Link to="/register" style={{ textDecoration: "none" }}>
+              <Button color="info" className="btnSet">
+                Register
+              </Button>
+            </Link>
+          </div>
         </Form>
-        <div style={{ marginTop: "20px", marginBottom: "20px" }}>
-          Not register? click hear to sign up~&nbsp;&nbsp;&nbsp;
-          <Link to="/register" style={{ textDecoration: "none" }}>
-            <Button color="secondary">Register</Button>
-          </Link>
-        </div>
       </div>
     </div>
   );

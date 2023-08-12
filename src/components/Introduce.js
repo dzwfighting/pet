@@ -1,6 +1,5 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-import pets1 from "../styles/images/pets1.jpg";
 import pets2 from "../styles/images/pets2.jpg";
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
@@ -15,41 +14,41 @@ const Introduce = () => {
   return (
     <div>
       <div className="introduceCard">
-        <Card className="bg-dark text-white">
-          <Card.Img src={pets2} alt="Card image" />
+        <Card className="bgSet">
+          <img src={pets2} alt="Card image" className="ImgSet" />
           <Card.ImgOverlay>
-            <Card.Title>
-              <p className="introduceCardTitle">Who we are</p>
-            </Card.Title>
-            <Card.Text>
-              <p className="introduceCardText">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content.
-              </p>
-            </Card.Text>
-            <div className="introduceCardButton">
-              {ifShow ? (
-                <Button variant="light" onClick={handlePageShow}>
-                  Know More
-                </Button>
-              ) : (
-                <Button variant="light" onClick={handlePageShow}>
-                  Less More
-                </Button>
-              )}
-            </div>
+            <h3 className="introduceCardTitle">Who we are</h3>
+            <p className="introduceCardText">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content.
+            </p>
+            {ifShow ? (
+              <Button
+                variant="light"
+                onClick={handlePageShow}
+                className="btnSet"
+              >
+                <p>Know More</p>
+              </Button>
+            ) : (
+              <Button
+                variant="light"
+                onClick={handlePageShow}
+                className="btnSet"
+              >
+                <p>Less More</p>
+              </Button>
+            )}
           </Card.ImgOverlay>
         </Card>
       </div>
 
-      {ifShow ? (
-        <div></div>
-      ) : (
-        <div className="introduceCard">
-          <Card className="bg-dark text-white">
-            <Card.Img src={pets2} alt="Card image" />
-            <Card.ImgOverlay>
-              <Card.Text>
+      <div className="introduceCard">
+        {ifShow ? null : (
+          <div>
+            <Card className="bgSet">
+              <img src={pets2} alt="Card image" className="ImgSet" />
+              <Card.ImgOverlay>
                 <p className="introduceCardText">
                   This is a wider card with supporting text below as a natural
                   lead-in to additional content. This content is a little bit
@@ -61,16 +60,18 @@ const Introduce = () => {
                   text below as a natural lead-in to additional content. This
                   content is a little bit longer.
                 </p>
-              </Card.Text>
-              <div className="introduceCardButton">
-                <Button variant="light" onClick={handlePageShow}>
-                  Less More
+                <Button
+                  variant="light"
+                  onClick={handlePageShow}
+                  className="btnSet"
+                >
+                  <p>Less More</p>
                 </Button>
-              </div>
-            </Card.ImgOverlay>
-          </Card>
-        </div>
-      )}
+              </Card.ImgOverlay>
+            </Card>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

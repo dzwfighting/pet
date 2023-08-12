@@ -31,7 +31,7 @@ const NavComponent = () => {
           expand={expand}
           className="bg-body-tertiary mb-3 navDeco"
         >
-          <Container fluid>
+          <Container fluid className="containerSet">
             <Navbar.Brand href="/" className="navDecoColor">
               Welcome To Pet Home
             </Navbar.Brand>

@@ -9,19 +9,25 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
+import "../styles/css/categories.css";
 
 const Cat = () => {
   return (
-    <Card sx={{ maxWidth: 1000 }}>
-      <CardMedia sx={{ height: 200 }} image={cat1} title="green iguana" />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+    <div className="cardSet">
+      <Card>
+        <CardMedia
+          sx={{ height: 300 }}
+          image={cat1}
+          title="green iguana"
+          className="imgSet"
+        />
+        <CardContent className="linkFont">
           <Link to="/products" state={{ category: "cat" }}>
             Cats
           </Link>
-        </Typography>
-      </CardContent>
-    </Card>
+        </CardContent>
+      </Card>
+    </div>
   );
 };
 
