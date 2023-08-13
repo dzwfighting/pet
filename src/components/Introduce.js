@@ -26,7 +26,7 @@ const Introduce = () => {
               <Button
                 variant="light"
                 onClick={handlePageShow}
-                className="btnSet"
+                className="introbtnSet"
               >
                 <p>Know More</p>
               </Button>
@@ -34,7 +34,7 @@ const Introduce = () => {
               <Button
                 variant="light"
                 onClick={handlePageShow}
-                className="btnSet"
+                className="introbtnSet"
               >
                 <p>Less More</p>
               </Button>
@@ -56,7 +56,11 @@ const Introduce = () => {
               natural lead-in to additional content. This content is a little
               bit longer.
             </p>
-            <Button variant="light" onClick={handlePageShow} className="btnSet">
+            <Button
+              variant="light"
+              onClick={handlePageShow}
+              className="introbtnSet"
+            >
               <p>Less More</p>
             </Button>
           </Card.ImgOverlay>
