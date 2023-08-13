@@ -18,7 +18,7 @@ const Contactus = () => {
               please send email to there, our team will solve your question as
               soon as possible
             </p>
-            <img src={cat11} className="imgSet" />
+            {/* <img src={cat11} className="imgSet" /> */}
             <div className="emailBlock">
               <p className="emailP">petteam1234@gmail.com</p>
             </div>

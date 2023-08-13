@@ -6,11 +6,15 @@
   align-items: center !important;
   justify-content: center !important;
   text-align: center !important;
+  margin-bottom: 70px;
+  width: calc(100%) !important;
 }
+
 .containerSet {
   font-family: "Open Sans", sans-serif;
   margin-left: 4% !important;
   padding: 2%;
+  width: calc(100%);
 }
 .link {
   margin-bottom: 5%;

@@ -14,7 +14,7 @@ import "../styles/css/categories.css";
 const Cat = () => {
   return (
     <div className="cardSet">
-      <Card>
+      <Card className="cSet">
         <CardMedia
           sx={{ height: 300 }}
           image={cat1}

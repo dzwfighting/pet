@@ -79,13 +79,18 @@ const Login = (args) => {
             />
           </FormGroup>
           <Button onClick={handleLogin} color="info" className="btnSet">
-            Login
+            <p>Login</p>
           </Button>
           <div style={{ marginTop: "20px" }} className="pSet">
-            Not register? click hear to sign up~&nbsp;&nbsp;&nbsp;
-            <Link to="/register" style={{ textDecoration: "none" }}>
-              <Button color="info" className="btnSet">
-                Register
+            Not register? click hear to sign
+            up~&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <Link
+              to="/register"
+              style={{ textDecoration: "none" }}
+              className="btnSet"
+            >
+              <Button color="info" className="regSet">
+                <p>Register</p>
               </Button>
             </Link>
           </div>

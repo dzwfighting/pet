@@ -12,8 +12,8 @@ const Introduce = () => {
     setIfShow(!ifShow);
   };
   return (
-    <div>
-      <div className="introduceCard">
+    <div className="introduceCard">
+      {ifShow ? (
         <Card className="bgSet">
           <img src={pets2} alt="Card image" className="ImgSet" />
           <Card.ImgOverlay>
@@ -41,37 +41,27 @@ const Introduce = () => {
             )}
           </Card.ImgOverlay>
         </Card>
-      </div>
-
-      <div className="introduceCard">
-        {ifShow ? null : (
-          <div>
-            <Card className="bgSet">
-              <img src={pets2} alt="Card image" className="ImgSet" />
-              <Card.ImgOverlay>
-                <p className="introduceCardText">
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer. This is a wider card with supporting text below as a
-                  natural lead-in to additional content. This content is a
-                  little bit longer. This is a wider card with supporting text
-                  below as a natural lead-in to additional content. This content
-                  is a little bit longer. This is a wider card with supporting
-                  text below as a natural lead-in to additional content. This
-                  content is a little bit longer.
-                </p>
-                <Button
-                  variant="light"
-                  onClick={handlePageShow}
-                  className="btnSet"
-                >
-                  <p>Less More</p>
-                </Button>
-              </Card.ImgOverlay>
-            </Card>
-          </div>
-        )}
-      </div>
+      ) : (
+        <Card className="bgSet">
+          <img src={pets2} alt="Card image" className="ImgSet" />
+          <Card.ImgOverlay>
+            <p className="introduceCardText">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer. This is a wider card with supporting text below as a
+              natural lead-in to additional content. This content is a little
+              bit longer. This is a wider card with supporting text below as a
+              natural lead-in to additional content. This content is a little
+              bit longer. This is a wider card with supporting text below as a
+              natural lead-in to additional content. This content is a little
+              bit longer.
+            </p>
+            <Button variant="light" onClick={handlePageShow} className="btnSet">
+              <p>Less More</p>
+            </Button>
+          </Card.ImgOverlay>
+        </Card>
+      )}
     </div>
   );
 };

@@ -1,15 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap");
 .cardSet {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  text-align: center !important;
-  margin-left: -18%;
+  /* margin-left: -18%; */
+  position: relative;
+
   font-family: "Open Sans", sans-serif !important;
   /* margin-right: -20% */
 }
+.cSet {
+  position: relative;
+  right: 10%;
+
+  /* width: 100vw; */
+  justify-content: center;
+}
 .imgSet {
-  width: 1000px !important;
+  width: 100vw !important;
 }
 .linkFont {
   font-size: 1.5em;
@@ -17,17 +22,6 @@
 }
 
 @media screen and (min-width: 1025px) {
-  .cardSet {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
-    margin-left: -18%;
-    /* margin-right: -20% */
-  }
-  .imgSet {
-    width: 1000px !important;
-  }
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .cardSet {
@@ -63,7 +57,7 @@
     width: 401px !important;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .cardSet {
     display: flex !important;
     align-items: center !important;

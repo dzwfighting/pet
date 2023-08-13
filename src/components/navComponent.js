@@ -29,11 +29,13 @@ const NavComponent = () => {
         <Navbar
           key={expand}
           expand={expand}
-          className="bg-body-tertiary mb-3 navDeco"
+          className="bg-body-tertiary mb-3 navDeco "
         >
           <Container fluid className="containerSet">
-            <Navbar.Brand href="/" className="navDecoColor">
-              Welcome To Pet Home
+            <Navbar.Brand className="navDecoColor">
+              <Link to="/" style={{ textDecoration: "none", color: "black" }}>
+                Welcome To Pet Home
+              </Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas

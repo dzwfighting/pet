@@ -5,7 +5,7 @@ import products from "../fake-data/products";
 import NavComponent from "./navComponent";
 
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
-import PropTypes from "prop-types";
+import "../styles/css/cart.css";
 import "remixicon/fonts/remixicon.css";
 
 import {
@@ -90,54 +90,51 @@ const ShopCartComponent = (props) => {
   if (newUser && newUser.cart) {
     card = cartProdData.map((pro) => {
       return (
-        <div style={{ marginTop: "40px", width: "100%" }}>
+        <div className="cartCardSet">
           <Card className="my-2">
             <Row>
-              <Col xs="3">
+              <Col xs="4">
                 <CardImg
                   alt="Card image cap"
                   src={pro.image}
-                  style={{
-                    marginBottom: "10px",
-                    width: "100%",
-                    height: "100%",
-                  }}
+                  className="cartImg"
                 />
               </Col>
-              <Col xs="3">
+              <Col xs="8">
                 <CardBody>
-                  <CardTitle
-                    tag="h2"
-                    style={{ marginTop: "50px", fontFamily: "cursive" }}
-                  >
-                    {pro.title}
-                  </CardTitle>
-                  <CardText style={{ marginTop: "120px" }}>
-                    <span style={{ marginRight: "50px" }}>
+                  <div className="pmiSet">
+                    <div className="cartTitle">
+                      <CardTitle tag="h2" style={{ marginTop: "50px" }}>
+                        {pro.title}
+                      </CardTitle>
+                    </div>
+
+                    <span className="plusSet">
                       <i
                         class="ri-add-line ri-2x"
                         onClick={() => handleAdd(pro.id)}
                       ></i>
                     </span>
-                    <span>
-                      <Input
-                        placeholder={Number(pro.curCnt)}
-                        style={{ height: "20px", width: "50px" }}
-                      />
-                    </span>
-                    <span>
+
+                    <Input
+                      placeholder={Number(pro.curCnt)}
+                      className="cntSet"
+                    />
+
+                    <span className="minusSet">
                       <i
                         class="ri-subtract-line ri-2x"
                         onClick={() => handleDel(pro.id)}
                       ></i>
                     </span>
-                  </CardText>
+                  </div>
+
                   {/* <CardText>
                 <small className="text-muted"></small>
               </CardText> */}
                 </CardBody>
               </Col>
-              <Col xs="3"></Col>
+              {/* <Col xs="3"></Col> */}
             </Row>
           </Card>
         </div>
@@ -157,25 +154,24 @@ const ShopCartComponent = (props) => {
       {curUser && newUser && cartProdData && totalPay ? (
         <div>
           {card}
-          <div>
-            <Button color="info" onClick={toggle}>
-              Check out
-            </Button>
-            <Modal isOpen={modal} toggle={toggle} className={className}>
-              <ModalHeader toggle={toggle} close={closeBtn}>
-                Total Pay
-              </ModalHeader>
-              <ModalBody>{totalPay}</ModalBody>
-              <ModalFooter>
-                <Button color="danger" onClick={handleCheckout}>
-                  Confirm
-                </Button>{" "}
-                <Button color="secondary" onClick={toggle}>
-                  Cancel
-                </Button>
-              </ModalFooter>
-            </Modal>
-          </div>
+
+          <Button color="info" onClick={toggle} className="checkBtnSet">
+            Check out
+          </Button>
+          <Modal isOpen={modal} toggle={toggle} className={className}>
+            <ModalHeader toggle={toggle} close={closeBtn}>
+              Total Pay
+            </ModalHeader>
+            <ModalBody>{totalPay}</ModalBody>
+            <ModalFooter>
+              <Button color="danger" onClick={handleCheckout}>
+                Confirm
+              </Button>{" "}
+              <Button color="secondary" onClick={toggle}>
+                Cancel
+              </Button>
+            </ModalFooter>
+          </Modal>
         </div>
       ) : (
         <div

@@ -15,6 +15,7 @@ import {
   Button,
 } from "reactstrap";
 import { useNavigate } from "react-router-dom";
+import "../styles/css/cart.css";
 
 const Collections = () => {
   const [curUserCollections, setCurUserCollections] = useState(undefined);
@@ -42,36 +43,31 @@ const Collections = () => {
   if (curUser && curUserCollections) {
     card = curUserCollections.map((pro) => {
       return (
-        <div style={{ marginTop: "40px", width: "100%" }}>
+        <div className="cartCardSet">
           <Card className="my-2">
             <Row>
-              <Col xs="3">
+              <Col xs="4">
                 <CardImg
                   alt="Card image cap"
                   src={pro.image}
-                  style={{
-                    marginBottom: "10px",
-                    width: "100%",
-                    height: "100%",
-                  }}
+                  className="cartImg"
                 />
               </Col>
-              <Col xs="3">
+              <Col xs="8">
                 <CardBody>
-                  <CardTitle
-                    tag="h2"
-                    style={{ marginTop: "50px", fontFamily: "cursive" }}
+                  <div className="cartTitle">
+                    <CardTitle tag="h2">{pro.title}</CardTitle>
+                  </div>
+
+                  <Button
+                    color="info"
+                    onClick={() => handleClick(pro.id)}
+                    className="details"
                   >
-                    {pro.title}
-                  </CardTitle>
-                  <CardText style={{ marginTop: "120px" }}>
-                    <Button color="info" onClick={() => handleClick(pro.id)}>
-                      Details
-                    </Button>
-                  </CardText>
+                    Details
+                  </Button>
                 </CardBody>
               </Col>
-              <Col xs="3"></Col>
             </Row>
           </Card>
         </div>

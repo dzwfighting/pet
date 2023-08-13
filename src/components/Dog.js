@@ -12,7 +12,7 @@ import "../styles/css/categories.css";
 const Dog = () => {
   return (
     <div className="cardSet">
-      <Card>
+      <Card className="cSet">
         <CardMedia
           sx={{ height: 300 }}
           image={dog3}
