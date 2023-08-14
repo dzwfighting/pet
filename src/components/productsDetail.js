@@ -21,15 +21,16 @@ import users, {
   delCart,
   deleteCollect,
 } from "../fake-data/users";
+import "../styles/css/prodetail.css";
 
 const useStyles = makeStyles({
   card: {
-    maxWidth: 500,
-    height: "auto",
-    marginTop: "40px",
-    marginLeft: "auto",
-    marginRight: "auto",
-    marginBottom: "50px",
+    // maxWidth: 500,
+    // height: "auto",
+    // marginTop: "40px",
+    // marginLeft: "auto",
+    // marginRight: "auto",
+    // marginBottom: "50px",
     borderRadius: 5,
     boxShadow: "0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);",
   },
@@ -131,30 +132,18 @@ const ProductsDetail = () => {
   return (
     <div>
       <NavComponent />
-      <Card className={classes.card} variant="outlined">
-        <CardMedia
-          className={classes.media}
-          component="img"
+
+      <div className="detailcard" variant="outlined">
+        <img
+          src={curProduct.image}
           alt="green iguana"
-          image={curProduct.image}
+          className="detailcardimg"
         />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Product Price
-          </Typography>
-          <Typography
-            variant="body2"
-            color="text.secondary"
-            style={{ marginBottom: "30px" }}
-          >
-            ${curProduct.price}
-          </Typography>
-          <Typography gutterBottom variant="h5" component="div">
-            Product Details
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {curProduct.desc}
-          </Typography>
+        <CardContent className="detailcontent">
+          <h2>Product Price</h2>
+          <p>${curProduct.price}</p>
+          <h2>Product Details</h2>
+          <p>{curProduct.desc}</p>
         </CardContent>
         <CardActions>
           {isLogin &&
@@ -181,7 +170,7 @@ const ProductsDetail = () => {
               </Button>
             ))}
         </CardActions>
-      </Card>
+      </div>
     </div>
   );
 };

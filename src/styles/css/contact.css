@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap");
-h3 {
+.containerSet h3 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,7 +8,7 @@ h3 {
   margin-left: 5%;
   font-size: 1.8rem;
 }
-p {
+.containerSet p {
   font-family: "Open Sans", sans-serif;
   margin-top: 6%;
   font-size: 1.5rem;
@@ -33,7 +33,7 @@ p {
 }
 
 @media screen and (min-width: 1025px) {
-  h3 {
+  .containerSet h3 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,7 +48,7 @@ p {
     align-items: center;
     text-align: center;
   }
-  p {
+  .containerSet p {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,7 +85,7 @@ p {
   }
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  h3 {
+  .containerSet h3 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,7 +101,7 @@ p {
     align-items: center;
     text-align: center;
   }
-  p {
+  .containerSet p {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -138,7 +138,7 @@ p {
   }
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
-  h3 {
+  .containerSet h3 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -154,7 +154,7 @@ p {
     justify-content: center;
     align-items: center;
   }
-  p {
+  .containerSet p {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -189,7 +189,7 @@ p {
   }
 }
 @media screen and (max-width: 480px) {
-  h3 {
+  .containerSet h3 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -205,7 +205,7 @@ p {
     justify-content: center;
     align-items: center;
   }
-  p {
+  .containerSet p {
     width: 300px;
     display: flex;
     justify-content: center;

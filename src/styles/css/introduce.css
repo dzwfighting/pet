@@ -16,6 +16,7 @@
   justify-content: center !important;
   text-align: center !important;
   height: 5vw;
+  margin-left: 0;
   margin-top: 40px;
   font-family: "Open Sans", sans-serif;
   font-size: 2.5rem;
@@ -124,7 +125,7 @@
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1025px) {
   .bgSet {
     color: black !important;
     background-color: transparent !important;
@@ -160,7 +161,7 @@
   }
 }
 
-@media screen and (min-width: 451px) and (max-width: 768px) {
+@media screen and (min-width: 601px) and (max-width: 768px) {
   .introduceCard {
     width: 95vw;
     height: 50vw;
@@ -205,30 +206,76 @@
     font-size: 0.9rem !important;
   }
 }
-@media screen and (min-width: 300px) and (max-width: 450px) {
+
+@media screen and (min-width: 451px) and (max-width: 601px) {
   .introduceCard {
-    width: 90vw;
+    width: 95vw;
     height: 60vw;
+  }
+  .bgSet {
+    width: 95vw;
+    height: 60vw;
+    border: 0 !important;
+  }
+  .ImgSet {
+    width: 95vw;
+    height: 70vw;
+  }
+  .introduceCardTitle {
+    margin-top: 20px;
+    margin-left: 0;
+    margin-bottom: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2rem;
+  }
+
+  .introduceCardText {
+    width: 90vw;
+    height: 40vw;
+    padding: 0;
+    margin: 0;
+    font-size: 0.8rem;
+  }
+
+  .introbtnSet {
+    width: 80px;
+    height: 20px;
+  }
+  .introbtnSet p {
+    width: 80px;
+    height: 80px;
+    margin-left: -14px;
+    margin-top: -37px;
+
+    font-size: 0.8rem !important;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 451px) {
+  .introduceCard {
+    width: 95vw;
+    height: 70vw;
     margin-bottom: 20px;
     margin-left: 10px;
   }
 
   .bgSet {
     background-color: transparent !important;
-    width: 90vw !important;
-    height: 60vw !important;
+    width: 95vw !important;
+    height: 70vw !important;
     border: 0 !important;
     /* margin-left: -22px; */
   }
   .ImgSet {
-    width: 90vw;
-    height: 60vw;
+    width: 95vw;
+    height: 70vw;
     opacity: 0.75;
     border-radius: 2%;
   }
   .introduceCardTitle {
     margin-top: 10px;
-    margin-bottom: 30px;
+    margin-left: 0;
+    /* margin-bottom: 30px; */
     font-family: "Open Sans", sans-serif;
     font-size: 1.1rem;
   }
@@ -240,15 +287,15 @@
   }
   .introbtnSet p {
     text-align: center;
-    width: 90vw !important;
-    margin-left: -7px;
+    width: 50px !important;
+    margin-left: -13px;
     margin-top: -5px;
     font-size: 0.46rem !important;
   }
   .introduceCardText {
     font-family: "Open Sans", sans-serif;
     width: 90vw !important;
-    height: 200px !important;
+    height: 40vw !important;
     margin-top: 15px !important;
     margin-left: -5px !important;
     padding-left: 5px;
