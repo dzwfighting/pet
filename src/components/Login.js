@@ -78,7 +78,7 @@ const Login = (args) => {
               className="inputSet"
             />
           </FormGroup>
-          <Button onClick={handleLogin} color="info" className="btnSet">
+          <Button onClick={handleLogin} color="info" className="loginbtnSet">
             <p>Login</p>
           </Button>
           <div style={{ marginTop: "20px" }} className="pSet">
@@ -87,7 +87,7 @@ const Login = (args) => {
             <Link
               to="/register"
               style={{ textDecoration: "none" }}
-              className="btnSet"
+              className="loginbtnSet"
             >
               <Button color="info" className="regSet">
                 <p>Register</p>
