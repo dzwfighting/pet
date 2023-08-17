@@ -31,6 +31,9 @@
     width: 300px;
     height: 380px;
   }
+  .detailfinalBtn {
+    margin-top: -5px;
+  }
 }
 
 @media screen and (min-width: 917px) and (max-width: 1105px) {
@@ -46,6 +49,9 @@
   }
   .detailcontent p {
     font-size: 0.8rem;
+  }
+  .detailfinalBtn {
+    margin-top: 5px;
   }
 }
 
@@ -84,11 +90,20 @@
   }
 }
 @media screen and (min-width: 480px) and (max-width: 615px) {
+  .detailcard {
+    display: block;
+  }
   .detailcardimg {
+    position: relative;
+    left: 30%;
     width: 20vw;
     height: 30vw;
   }
+  .detailcontent {
+    width: 95vw;
+  }
   .detailcontent h2 {
+    width: 95vw;
     margin-left: 0;
     margin-bottom: 2px;
     font-size: 0.6rem;
@@ -97,16 +112,25 @@
     margin-left: 2px;
     padding-right: 0;
     padding-bottom: 0px;
-    width: 74vw;
+    width: 90vw;
     font-size: 0.4rem;
   }
 }
 @media screen and (min-width: 200px) and (max-width: 480px) {
+  .detailcard {
+    display: block;
+  }
   .detailcardimg {
+    position: relative;
+    left: 25%;
     width: 100px;
     height: 150px;
   }
+  .detailcontent {
+    width: 95vw;
+  }
   .detailcontent h2 {
+    width: 90vw;
     margin-left: 0;
     margin-bottom: 2px;
     font-size: 0.5rem;
@@ -115,7 +139,7 @@
     margin-left: 2px;
     padding-right: 0;
     padding-bottom: 0px;
-    width: 74vw;
+    width: 90vw;
     font-size: 0.3rem;
   }
 }

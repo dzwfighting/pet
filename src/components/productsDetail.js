@@ -145,31 +145,28 @@ const ProductsDetail = () => {
           <h2>Product Details</h2>
           <p>{curProduct.desc}</p>
         </CardContent>
-        <CardActions>
-          {isLogin &&
-            (isCollect ? (
-              <Button
-                size="small"
-                onClick={() => handleUnCollect(curProduct.id)}
-              >
-                UnCollect
-              </Button>
-            ) : (
-              <Button size="small" onClick={() => handleCollect(curProduct.id)}>
-                Collect
-              </Button>
-            ))}
-          {isLogin &&
-            (addIn ? (
-              <Button size="small" onClick={handleAddToCart}>
-                Add to Cart
-              </Button>
-            ) : (
-              <Button size="small" onClick={handleAddToCart}>
-                Delete From Cart
-              </Button>
-            ))}
-        </CardActions>
+      </div>
+      <div className="detailfinalBtn">
+        {isLogin &&
+          (isCollect ? (
+            <Button size="small" onClick={() => handleUnCollect(curProduct.id)}>
+              UnCollect
+            </Button>
+          ) : (
+            <Button size="small" onClick={() => handleCollect(curProduct.id)}>
+              Collect
+            </Button>
+          ))}
+        {isLogin &&
+          (addIn ? (
+            <Button size="small" onClick={handleAddToCart}>
+              Add to Cart
+            </Button>
+          ) : (
+            <Button size="small" onClick={handleAddToCart}>
+              Delete From Cart
+            </Button>
+          ))}
       </div>
     </div>
   );

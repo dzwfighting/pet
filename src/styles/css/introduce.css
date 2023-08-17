@@ -47,7 +47,7 @@
   justify-content: center !important;
   text-align: center !important;
   font-family: "Open Sans", sans-serif;
-  width: 90vw;
+  width: 100vw;
   height: 25vw;
   margin-top: 1vw;
   /* padding-left: 200px; */
@@ -69,6 +69,7 @@
 
 .introbtnSet p {
   /* position: relative; */
+
   width: 100px;
 }
 
@@ -101,7 +102,7 @@
     font-size: 1rem;
   }
   .introduceCardText {
-    width: 90vw;
+    width: 100vw;
     font-size: 1.5rem;
     /* margin-top: 0px; */
   }
@@ -154,7 +155,7 @@
   }
 
   .introduceCardText {
-    width: 90vw;
+    width: 100vw;
     height: 25vw;
     /* margin-top: 10px; */
     font-size: 1.3rem;
@@ -239,13 +240,13 @@
 
   .introbtnSet {
     width: 80px;
-    height: 20px;
+    height: 22px;
   }
   .introbtnSet p {
     width: 80px;
     height: 80px;
     margin-left: -14px;
-    margin-top: -37px;
+    margin-top: -7px;
 
     font-size: 0.8rem !important;
   }
@@ -283,7 +284,7 @@
   .introbtnSet {
     width: 50px !important;
     height: 15px !important;
-    margin-top: 5px !important;
+    margin-top: -20px !important;
   }
   .introbtnSet p {
     text-align: center;
