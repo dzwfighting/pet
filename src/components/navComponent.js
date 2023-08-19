@@ -26,11 +26,7 @@ const NavComponent = () => {
   return (
     <div className="wholeLink">
       {[false].map((expand) => (
-        <Navbar
-          key={expand}
-          expand={expand}
-          className="bg-body-tertiary mb-3 navDeco "
-        >
+        <Navbar key={expand} expand={expand} className="navDeco ">
           <Container fluid className="containerSet">
             <Navbar.Brand className="navDecoColor">
               <Link to="/" style={{ textDecoration: "none", color: "black" }}>

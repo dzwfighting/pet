@@ -5,7 +5,8 @@
   font-family: "Open Sans", sans-serif !important;
 }
 body {
-  background-image: url(./styles//images/background1.webp);
+  /* background-image: url(./styles//images/background1.webp); */
+  background-color: rgb(230, 230, 230) !important;
 }
 
 .App-logo {
@@ -26,7 +27,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 100vw;
   color: white;
 }
 
