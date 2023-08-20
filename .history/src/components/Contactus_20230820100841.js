@@ -16,7 +16,9 @@ const Contactus = () => {
           please send email to there, our team will solve your question as soon
           as possible
         </p>
-        <div className="emailBlock">petteam1234@gmail.com</div>
+        <div className="emailBlock">
+          <p className="emailP">petteam1234@gmail.com</p>
+        </div>
       </div>
     </div>
   );

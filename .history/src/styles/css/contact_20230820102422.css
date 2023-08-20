@@ -39,34 +39,29 @@
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .contactContainerSet h3 {
-    width: 95vw;
     font-size: 1.3rem;
   }
 
   .contactContainerSet p {
-    width: 95vw;
+    /* width: 80vw; */
     font-size: 1rem;
   }
   .emailBlock {
-    width: 95vw;
     font-size: 1rem;
   }
 }
 @media screen and (max-width: 480px) {
   .contactContainerSet {
-    width: 95vw;
+    width: 80vw;
   }
   .contactContainerSet h3 {
-    width: 95vw;
     font-size: 1.3rem;
   }
 
   .contactContainerSet p {
-    width: 95vw;
     font-size: 1rem;
   }
   .emailBlock {
-    width: 95vw;
     font-size: 1rem;
   }
 }
