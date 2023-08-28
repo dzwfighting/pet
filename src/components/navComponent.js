@@ -28,8 +28,12 @@ const NavComponent = () => {
       {[false].map((expand) => (
         <Navbar key={expand} expand={expand} className="navDeco ">
           <Container fluid className="containerSet">
-            <Navbar.Brand className="navDecoColor">
-              <Link to="/" style={{ textDecoration: "none", color: "black" }}>
+            <Navbar.Brand>
+              <Link
+                to="/"
+                style={{ textDecoration: "none", color: "black" }}
+                className="navDeco"
+              >
                 Welcome To Pet Home
               </Link>
             </Navbar.Brand>

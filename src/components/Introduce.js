@@ -14,48 +14,21 @@ const Introduce = () => {
   return (
     <div className="introduceCard">
       {ifShow ? (
-        <Card className="bgSet">
-          <img src={back1} alt="Card image" className="ImgSet" />
-          <Card.ImgOverlay>
-            <h3 className="introduceCardTitle">Who we are</h3>
-            <p className="introduceCardText">
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content.
-            </p>
-            {ifShow ? (
-              <Button
-                variant="light"
-                onClick={handlePageShow}
-                className="introbtnSet"
-              >
-                Know More
-              </Button>
-            ) : (
-              <Button
-                variant="light"
-                onClick={handlePageShow}
-                className="introbtnSet"
-              >
-                Less More
-              </Button>
-            )}
-          </Card.ImgOverlay>
-        </Card>
-      ) : (
-        <Card className="bgSet">
-          <img src={back1} alt="Card image" className="ImgSet" />
-          <Card.ImgOverlay>
-            <p className="moreintroduceCardText">
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer. This is a wider card with supporting text below as a
-              natural lead-in to additional content. This content is a little
-              bit longer. This is a wider card with supporting text below as a
-              natural lead-in to additional content. This content is a little
-              bit longer. This is a wider card with supporting text below as a
-              natural lead-in to additional content. This content is a little
-              bit longer.
-            </p>
+        <div className="bgSet">
+          <h3 className="introduceCardTitle">Who we are</h3>
+          <p className="introduceCardText">
+            This is a wider card with supporting text below as a natural lead-in
+            to additional content.
+          </p>
+          {ifShow ? (
+            <Button
+              variant="light"
+              onClick={handlePageShow}
+              className="introbtnSet"
+            >
+              Know More
+            </Button>
+          ) : (
             <Button
               variant="light"
               onClick={handlePageShow}
@@ -63,8 +36,28 @@ const Introduce = () => {
             >
               Less More
             </Button>
-          </Card.ImgOverlay>
-        </Card>
+          )}
+        </div>
+      ) : (
+        <div className="bgSet">
+          <p className="moreintroduceCardText">
+            This is a wider card with supporting text below as a natural lead-in
+            to additional content. This content is a little bit longer. This is
+            a wider card with supporting text below as a natural lead-in to
+            additional content. This content is a little bit longer. This is a
+            wider card with supporting text below as a natural lead-in to
+            additional content. This content is a little bit longer. This is a
+            wider card with supporting text below as a natural lead-in to
+            additional content. This content is a little bit longer.
+          </p>
+          <Button
+            variant="light"
+            onClick={handlePageShow}
+            className="introbtnSet"
+          >
+            Less More
+          </Button>
+        </div>
       )}
     </div>
   );

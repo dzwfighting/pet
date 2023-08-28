@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import products from "../fake-data/products";
 
-import "../styles/allproducts.css";
+import "../styles/css/allproducts.css";
 import { Link, useLocation } from "react-router-dom";
 import {
   Card,
